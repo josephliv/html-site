@@ -26,6 +26,9 @@ body {
     --title-font: 'Comfortaa', cursive;
     --text-font: 'Roboto', sans-serif;
 }
+hr {
+    margin: 10px 30%;
+}
 
 p,
 li {
@@ -43,7 +46,27 @@ h1, h2, h3, h4 {
     padding: 10px;
     grid-area: t; /* t for top */
 }
-
+.custom-btn {
+    display: flex;
+align-items: center;
+justify-content: center;
+max-width: 400px;
+margin: 10px auto;
+}
+.custom-btn a {
+    text-transform: uppercase;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 3px inset var(--secondary);
+    color: var(--light-text-color);
+    transition: 300ms ease-in-out;
+}
+.custom-btn a:hover {
+    background-color: #52a3eb;
+    color: var(--text-color);
+}
 .inner-header {
     display: flex;
     flex-wrap: wrap;
@@ -63,6 +86,7 @@ h1, h2, h3, h4 {
         't t t t t t t t'
         'h h h h h h h h'
         'i i i i i i i i'
+        'b b b b b b b b'
         's s s s s s s s'
         'r r r r r r r r'
         'f f f f f f f f'
@@ -76,13 +100,14 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 15px #333;
 }
 
-@media (min-width: 90em) {
+@media (min-width: 50em) {
     .page {
         grid-template-areas:
             't t t t t t t t'
-            'h h h h h h s s'
-            'i i i i i i s s'
-            'r r r r r r r r'
+            'h h h h h h h h'
+            'i i i i i i i i'
+            'b b b b s s s s'
+            'r r r r s s s s'
             'f f f f f f f f'
         ;
         gap: 1.3rem;
@@ -90,7 +115,20 @@ h1, h2, h3, h4 {
     }
     
 }
-
+@media (min-width: 90em) {
+    .page {
+        grid-template-areas:
+            't t t t t t t t'
+            'h h h h h h s s'
+            'i i i i i i s s'
+            'b b r r r r r r'
+            'f f f f f f f f'
+        ;
+        gap: 1.3rem;
+        padding: 1.3rem;
+    }
+    
+}
 /* hero section front page */
 .hero {
     grid-area: h;
@@ -131,11 +169,7 @@ h1, h2, h3, h4 {
     background-color: var(--primary-trans);
     color: var(--light-text-color);
 }
-.inner-hero hr {
-    max-width: 200px;
-    margin: 15px auto;
 
-}
 
 .site-title h1 {
     font-size: 2.2em;
@@ -183,8 +217,32 @@ h1, h2, h3, h4 {
     font-size: 1.5em;
     text-transform: capitalize;
 }
-
-
+/* badges and accomplishments */
+.badges {
+    grid-area: b; 
+}
+.badges-inner {
+    padding: 1rem;
+    display: grid;
+    align-items: center;
+}
+.badges-inner h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--primary);
+}
+.badges-inner .box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+.badges-inner img {
+    height: 100px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+}
 /* registration area and form */
 .registration-area {
     grid-area: r;
@@ -211,7 +269,7 @@ h1, h2, h3, h4 {
     box-shadow: 0 0 15px #333;
     background-color: rgba(245, 245, 220, 0.6);
     padding: clamp(2em, 1em, 3.5em);
-    max-width: 1200px;
+    max-width: 900px;
     margin-inline: auto;
     border: 3px outset var(--primary);
     border-radius: 4px;
