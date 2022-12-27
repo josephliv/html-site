@@ -31,7 +31,11 @@ p,
 li {
     font-family: var(--text-font);
     font-size: 1.5rem;
-    margin-bottom: .8em;
+}
+h1, h2, h3, h4 {
+    font-family: var(--title-font);
+    text-transform: capitalize;
+    font-weight: 600;
 }
 
 .head {
@@ -105,6 +109,8 @@ li {
     border: 1px solid var(--secondary);
     padding: .8em 1em;
     max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
     text-align: center;
     border-radius: 4px;
     box-shadow: 0 0 15px #333;
@@ -188,7 +194,11 @@ li {
 .registration-area-inner {
     box-shadow: 0 0 15px #333;
     background-color: rgba(245, 245, 220, 0.6);
-    padding: clamp(3em, 1em, 5em)
+    padding: clamp(2em, 1em, 3.5em);
+    max-width: 1200px;
+    margin-inline: auto;
+    border: 3px outset var(--primary);
+    border-radius: 50px / 30px;
 }
 
 .form-grid {
@@ -263,12 +273,20 @@ details {
     color: var(--text-color);
     min-width: 300px;
     margin: 10px auto;
-    padding: 18px;
     border: none;
     text-align: left;
     outline: none;
+    max-width: 900px;
 }
-
+details > summary {
+    font-family: var(--title-font);
+    font-size: 1.4rem;
+    padding: 18px 10px;
+}
+details > div {
+    background-color: var(--light-section-bg-color);
+    padding: 10px;
+}
 .footer {
     background-color: var(--primary);
     padding: 1.2em;
@@ -279,10 +297,11 @@ details {
     flex-wrap: wrap;
     gap: 1rem;
     align-items: center;
+    justify-content: space-around  ;
 }
 
 
-/* footer for tablets */
+/* footer for tablets 
 @media (min-width: 40em) {
     .footer-inner {
         max-width: 1200px;
@@ -290,9 +309,10 @@ details {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
+        align-items: center;
     }
     
-}
+}*/
 
 /* back to top button */ 
 #myBtn {
