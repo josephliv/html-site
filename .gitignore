@@ -1,0 +1,5 @@
+.well-known/
+ logs/
+ .well-known/*
+ /essential-elementor/*
+ /cgi-bin
