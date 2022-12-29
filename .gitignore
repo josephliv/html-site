@@ -3,3 +3,4 @@
  .well-known/*
  /essential-elementor/*
  /cgi-bin
+ *.zip
